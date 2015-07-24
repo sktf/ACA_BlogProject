@@ -1,4 +1,4 @@
 <?php
 
-include('db_info.php');
+require_once('db_info.php');
 

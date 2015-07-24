@@ -1,18 +1,23 @@
 <?php
-//note: read map generator files and look for syntax, close to what is needed
-include('db_info.php');
-
-//Name="text_body"
+require_once('db_info.php');
 ?>
 
-<h1>Blog Blog Blog</h1>
-
+<h1>Create or Edit Post</h1>
 <form action="edit_post.php" method="POST">
-
-    <input type="submit" name="submit" value="SUBMIT" /><br>
-    <br><br>
-    <input type="text" name="author" value="Author" /><br>
+    <input type="title" name="Title" placeholder="Title Your Post" /><br>
     <br>
-    <TEXTAREA name="blog_body" COLS="20" ROWS="4" </TEXTAREA>
+    <input type="text" name="author" placeholder="Author's Name" /><br>
+    <br>
+    <TEXTAREA name="content" rows="25" cols="80">Add Content!</TEXTAREA>
+    <br>
+    <input type="submit" name="submit" value="POST IT!" /><br>
 
 </form>
+<?php
+if(isset($_POST['submit'])){
+    $title = $_POST['title'];
+    $author = $_POST['author'];
+    $content = $_POST['content'];
+
+    //more to be added
+}
